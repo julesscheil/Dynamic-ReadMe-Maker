@@ -1,8 +1,10 @@
-# Generate a dynamic ReadMe with Nodejs
+# Dynamic ReadMe Generator
 
+## Description
 This application with generate a readme using inquirer prompts based on input
 
 Here is a recording of the application:
-<iframe src="https://drive.google.com/file/d/1RuaoM4FSPsYBTFVJtKvyvoOMmBmt823N/preview" width="640" height="480"></iframe>
+https://drive.google.com/file/d/1RuaoM4FSPsYBTFVJtKvyvoOMmBmt823N/view
 
-DynamicReadMe.md file is example file
+DynamicReadMe.md file is example file..
+![Portfolio Site](./assets/screenshot.png)
