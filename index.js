@@ -1,76 +1,73 @@
-// TODO: Include packages needed for this application
-
+// Include packages needed for this application
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
-// TODO: Create an array of questions for user input
-const questions = [];
+// Create an array of questions for user input
+const questions = [{
+        type: 'input',
+        message: 'What is your GitHub user name?',
+        name: 'githubUser',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is your projects name?',
+        name: 'title',
+    },
+    {
+        type: 'input',
+        message: 'Please give a short description of your project: ',
+        name: 'description',
+    },
+    {
+        type: 'list',
+        message: 'What kind of license should your project have?',
+        name: 'license',
+        choices: ["MIT","Apache 2.0","None"]
+    },
+    {
+        type: 'input',
+        message: 'What command should be ran to install dependencies?',
+        name: 'installation',
+    },
+    {
+        type: 'input',
+        message: 'What command should be ran to run tests?',
+        name: 'test',
+    },
+    {
+        type: 'input',
+        message: 'What does the user need to know about using the repo?',
+        name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'What does the user need to know about contributing to the repo?',
+        name: 'contributing',
+    },
+];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(readMeContent, data) {
+//     
+//     };
 
-// TODO: Create a function to initialize app
-function init() {}
+    // TODO: Create a function to initialize app
+    function init() {
+        inquirer
+            .prompt(questions)
+            .then((answers) => {
+                    const readMeContent = generateMarkdown(answers);
+                    console.log('Generating ReadMe...');
+                    fs.writeFile('ReadMe.md', readMeContent, (err) =>
+                    err ? console.error(err) : console.log("success"))
+            });
+            
+}
 
 // Function call to initialize app
 init();
-
-
-const readMeContent = (answers) => 
-    `# User Project Title
-
-    ## Description
-    
-    ## Table of Contents
-    * [Installation]
-    
-    * [Usage]
-    
-    * [License]
-    
-    * [Contributing]
-    
-    * [Tests]
-    
-    * [Questions]
-
-    ## Installation
-    
-    ## Usage
-    
-    ## License
-    
-    ## Contributing
-    
-    ## Tests
-    
-    ## Questions`
-
-
-inquirer
-    .prompt([{
-            type: 'input',
-            message: 'What is your name?',
-            name: 'usersName',
-        },
-        {
-            type: 'input',
-            message: 'Where are you from?',
-            name: 'location',
-        },
-        {
-            type: 'input',
-            message: 'Please paste link to GitHub:',
-            name: 'github',
-        },
-        {
-            type: 'input',
-            message: 'Please paste link to LinkedIn:',
-            name: 'linkedin',
-        },
-    ])
-    .then((answers) => {
-        const createHTML = readMeContent(answers);
-        fs.writeFile('index.html', createHTML, (err) =>
-            err ? console.error(err) : console.log('Success!')
-        );
-    });
