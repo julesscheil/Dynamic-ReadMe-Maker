@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
+const { generate } = require('rxjs');
 
 // array of questions for user input
 const questions = [{

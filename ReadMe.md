@@ -1,9 +1,7 @@
-# readme
-function renderLicenseSection(license) {
-  renderLicenseBadge(license)+renderLicenseLink(license)
-}
+# Generate ReadME
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  generates a readme
+  this generates a dynamic readme
   ## Table of Contents
   * [Installation](#Installation)
   
@@ -19,20 +17,16 @@ function renderLicenseSection(license) {
 
   ## Installation
   To install dependencies, run this: 
-  '''
-  init i 
-  '''
+  '''npm i readme'''
   ## Usage
-  nothing
+  i made it
   ## License
   This project is licensed with MIT license
   ## Contributing
   undefined
   ## Tests
  To run a test type this command 
-  '''
- node index.js
-  '''
+  '''node index.js'''
  
   ## Questions
-  For question, you can reach me at julesscheil@gmail.com or my github @julesscheil
+  For question, you can reach me at jules.m.scheil@gmail.com or my github @julesscheil
