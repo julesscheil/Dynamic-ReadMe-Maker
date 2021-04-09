@@ -1,32 +1,8 @@
-# Generate ReadME
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  ## Description
-  this generates a dynamic readme
-  ## Table of Contents
-  * [Installation](#Installation)
-  
-  * [Usage](#Usage)
-  
-  * [License](#License)
-  
-  * [Contributing](#Contributing)
-  
-  * [Tests](#Tests)
-  
-  * [Questions](#Questions)
+# Generate a dynamic ReadMe with Nodejs
 
-  ## Installation
-  To install dependencies, run this: 
-  '''npm i readme'''
-  ## Usage
-  i made it
-  ## License
-  This project is licensed with MIT license
-  ## Contributing
-  undefined
-  ## Tests
- To run a test type this command 
-  '''node index.js'''
- 
-  ## Questions
-  For question, you can reach me at jules.m.scheil@gmail.com or my github @julesscheil
+This application with generate a readme using inquirer prompts based on input
+
+Here is a recording of the application:
+<iframe src="https://drive.google.com/file/d/1RuaoM4FSPsYBTFVJtKvyvoOMmBmt823N/preview" width="640" height="480"></iframe>
+
+DynamicReadMe.md file is example file

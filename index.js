@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
-const { generate } = require('rxjs');
 
 // array of questions for user input
 const questions = [{
@@ -61,7 +60,7 @@ function init() {
         .then((answers) => {
             const readMeContent = generateMarkdown(answers);
             console.log('Generating ReadMe...');
-            fs.writeFile('ReadMe.md', readMeContent, (err) =>
+            fs.writeFile('DynamicReadMe.md', readMeContent, (err) =>
                 err ? console.error(err) : console.log("success"))
         });
 
